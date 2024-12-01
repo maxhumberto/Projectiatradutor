@@ -12,7 +12,7 @@ Original file is located at
 import requests
 from bs4 import BeautifulSoup
 from langchain_openai.chat_models.azure import AzureChatOpenAI
-
+import os
 
 def extract_text_from_url(url):
     try:
@@ -38,7 +38,7 @@ def extract_text_from_url(url):
 
 client = AzureChatOpenAI(
     azure_endpoint='https://ai-dio-bootcamp-dev-eastus-001.openai.azure.com/',
-    api_key="60Q0MJuBhMl3mUVbNqKLP6QXhA0RuxwdsYcAeid2gYFwvn68luD3JQQJ99AKACHYHv6XJ3w3AAABACOG0vZG",
+    api_key= os.getenv("AZURE_OPENAI_KEY"),
     api_version="turbo-2024-04-09",
     deployment_name="gpt-4",
     max_retries=0
