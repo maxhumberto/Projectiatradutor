@@ -13,7 +13,7 @@ import requests
 from docx import Document
 import os
 
-subscription_key ="MPnG1ktn7YpHaAvne1XWbJdTiKQgq48VvgrTqk4r3tkFlvHnUohUJQQJ99AKAC8vTInXJ3w3AAAbACOG0Lzm"
+subscription_key =os.getenv("AZURE_OPENAI_KEY"),
 endpoint = 'https://api.cognitive.microsofttranslator.com'
 location = "westus2"
 target_destination = 'pt-br'
